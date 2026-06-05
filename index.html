@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GST Billing — Simple & Easy For Indian Businesses</title>
+  <meta name="description" content="GST Billing App - Unlimited Invoice Generation, PDF Export, Cloud Backup, and Monthly Reports for Indian businesses.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .gradient-bg { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+    .pink-glow { box-shadow: 0 0 40px rgba(233, 30, 99, 0.3); }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .screenshot-frame {
+      border-radius: 24px;
+      border: 4px solid rgba(233, 30, 99, 0.3);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .screenshot-frame:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(233, 30, 99, 0.2);
+    }
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #e91e63, #ff4081);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+  </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="navbar bg-base-100/50 backdrop-blur-md fixed top-0 z-50 border-b border-white/10">
+    <div class="navbar-start">
+      <div class="flex items-center gap-3 px-4">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold text-lg">₹</div>
+        <span class="text-xl font-bold text-white">GST Billing</span>
+      </div>
+    </div>
+    <div class="navbar-end hidden md:flex gap-4 px-4">
+      <a href="#features" class="btn btn-ghost text-white">Features</a>
+      <a href="#screenshots" class="btn btn-ghost text-white">Screenshots</a>
+      <a href="#pricing" class="btn btn-ghost text-white">Pricing</a>
+      <a href="#terms" class="btn btn-ghost text-white">Terms</a>
+      <a href="#privacy" class="btn btn-ghost text-white">Privacy</a>
+      <a href="https://play.google.com/store/apps/details?id=com.example.billing_flutter" target="_blank" class="btn bg-pink-600 hover:bg-pink-700 text-white border-none">Download App</a>
+    </div>
+    <div class="navbar-end md:hidden px-4">
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#terms">Terms</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pink-500/20 border border-pink-500/30 text-pink-300 text-sm mb-8">
+        <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+        Now Available on Google Play Store
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        GST Billing App
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto">
+        Simple and easy For Indian businesses
+      </p>
+      <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+        Generate unlimited GST invoices, export PDFs with custom columns, backup to Google Drive, and download monthly reports — all in one app.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://play.google.com/store/apps/details?id=com.example.billing_flutter" target="_blank" class="btn btn-lg bg-pink-600 hover:bg-pink-700 text-white border-none px-8">
+          <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.71 11.5 20.71 11.96C20.71 12.41 20.5 12.83 20.16 13.1L17.89 14.45L15.39 11.95L17.89 9.45L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/></svg>
+          Get it on Play Store
+        </a>
+        <a href="#screenshots" class="btn btn-lg btn-outline border-white/30 text-white hover:bg-white/10 px-8">View Screenshots</a>
+      </div>
+
+      <!-- App Preview Mockup -->
+      <div class="mt-16 relative">
+        <div class="absolute inset-0 bg-pink-500/20 blur-3xl rounded-full max-w-lg mx-auto"></div>
+        <div class="relative grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="glass-card rounded-3xl p-6 text-left transform md:translate-y-8">
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="text-xl font-bold mb-2">Dashboard</h3>
+            <p class="text-gray-400 text-sm">View total bills, from/to users count, and uploaded QR code at a glance.</p>
+          </div>
+          <div class="glass-card rounded-3xl p-6 text-left pink-glow">
+            <div class="text-4xl mb-4">🧾</div>
+            <h3 class="text-xl font-bold mb-2">GST Invoices</h3>
+            <p class="text-gray-400 text-sm">Generate professional GST invoices with auto tax detection (IGST/SGST+CGST).</p>
+          </div>
+          <div class="glass-card rounded-3xl p-6 text-left transform md:translate-y-8">
+            <div class="text-4xl mb-4">☁️</div>
+            <h3 class="text-xl font-bold mb-2">Cloud Backup</h3>
+            <p class="text-gray-400 text-sm">Backup and restore all data securely via Google Drive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Powerful Features</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Everything you need to manage GST billing for your business</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">📄</div>
+          <h3 class="text-lg font-bold mb-2">Unlimited Invoices</h3>
+          <p class="text-gray-400 text-sm">Generate as many GST invoices as you need. No limits.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">🎨</div>
+          <h3 class="text-lg font-bold mb-2">Custom PDF Columns</h3>
+          <p class="text-gray-400 text-sm">Toggle columns like Product, HSN, Case, Qty, Unit, Price, Amount per your need.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">📦</div>
+          <h3 class="text-lg font-bold mb-2">Monthly ZIP Reports</h3>
+          <p class="text-gray-400 text-sm">Download monthly bundles of CSV + PDF invoices as a single ZIP file.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">🔒</div>
+          <h3 class="text-lg font-bold mb-2">Encrypted Storage</h3>
+          <p class="text-gray-400 text-sm">Subscription and payment data stored with AES encryption locally.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">🖼️</div>
+          <h3 class="text-lg font-bold mb-2">Logo & QR Code</h3>
+          <p class="text-gray-400 text-sm">Upload your company logo and custom QR code to appear on every invoice.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">📤</div>
+          <h3 class="text-lg font-bold mb-2">Share & Export</h3>
+          <p class="text-gray-400 text-sm">Share PDFs, CSV reports, and ZIP bundles via WhatsApp, Email, or any app.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">👥</div>
+          <h3 class="text-lg font-bold mb-2">User Management</h3>
+          <p class="text-gray-400 text-sm">Manage From and To party details with GST numbers, addresses, and contact info.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">💾</div>
+          <h3 class="text-lg font-bold mb-2">Auto Backup</h3>
+          <p class="text-gray-400 text-sm">Triple local backup + optional Google Drive backup with auto-restore on reinstall.</p>
+        </div>
+        <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition-colors">
+          <div class="feature-icon mb-4">💳</div>
+          <h3 class="text-lg font-bold mb-2">Razorpay Payments</h3>
+          <p class="text-gray-400 text-sm">Secure monthly subscription payments via Razorpay with UPI, Cards, and Wallets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section id="screenshots" class="py-20 px-4 bg-black/20">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">App Screenshots</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">A glimpse of the beautiful dark-themed GST billing experience</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="screenshot-frame bg-gray-900 aspect-[9/19] flex flex-col items-center justify-center p-4">
+          <div class="w-full h-full bg-gradient-to-b from-pink-900/30 to-purple-900/30 rounded-2xl flex flex-col items-center justify-center p-4">
+            <div class="text-5xl mb-4">🏠</div>
+            <p class="text-center text-sm font-bold">Dashboard</p>
+            <p class="text-center text-xs text-gray-400 mt-2">View stats, bills, users count & QR code</p>
+          </div>
+        </div>
+        <div class="screenshot-frame bg-gray-900 aspect-[9/19] flex flex-col items-center justify-center p-4">
+          <div class="w-full h-full bg-gradient-to-b from-pink-900/30 to-purple-900/30 rounded-2xl flex flex-col items-center justify-center p-4">
+            <div class="text-5xl mb-4">🧾</div>
+            <p class="text-center text-sm font-bold">Generate Bill</p>
+            <p class="text-center text-xs text-gray-400 mt-2">Create GST invoices with items & auto-tax</p>
+          </div>
+        </div>
+        <div class="screenshot-frame bg-gray-900 aspect-[9/19] flex flex-col items-center justify-center p-4">
+          <div class="w-full h-full bg-gradient-to-b from-pink-900/30 to-purple-900/30 rounded-2xl flex flex-col items-center justify-center p-4">
+            <div class="text-5xl mb-4">📄</div>
+            <p class="text-center text-sm font-bold">Invoice Preview</p>
+            <p class="text-center text-xs text-gray-400 mt-2">View, share & multi-select PDF invoices</p>
+          </div>
+        </div>
+        <div class="screenshot-frame bg-gray-900 aspect-[9/19] flex flex-col items-center justify-center p-4">
+          <div class="w-full h-full bg-gradient-to-b from-pink-900/30 to-purple-900/30 rounded-2xl flex flex-col items-center justify-center p-4">
+            <div class="text-5xl mb-4">⚙️</div>
+            <p class="text-center text-sm font-bold">PDF Settings</p>
+            <p class="text-center text-xs text-gray-400 mt-2">Customize columns, colors, logo & QR</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-8">Replace placeholder frames with actual app screenshots (add PNG/JPG files to <code>landing_page/screenshots/</code> folder)</p>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Simple Pricing</h2>
+      <p class="text-gray-400 mb-12">One plan. Full access. No hidden fees.</p>
+      <div class="card bg-gradient-to-br from-pink-600/20 to-purple-600/20 border border-pink-500/30 max-w-md mx-auto">
+        <div class="card-body items-center text-center">
+          <h3 class="card-title text-2xl">Monthly Subscription</h3>
+          <div class="my-4">
+            <span class="text-5xl font-bold text-pink-400">₹250</span>
+            <span class="text-gray-400">/month</span>
+          </div>
+          <ul class="text-left space-y-2 mb-6">
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Unlimited Invoice Generation</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> PDF Export with Custom Columns</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Monthly ZIP Report Downloads</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Google Drive Cloud Backup</li>
+            <li class="flex items-center gap-2"><svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Offline Access</li>
+          </ul>
+          <a href="https://play.google.com/store/apps/details?id=com.example.billing_flutter" target="_blank" class="btn btn-block bg-pink-600 hover:bg-pink-700 text-white border-none">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terms & Agreement Section -->
+  <section id="terms" class="py-20 px-4 bg-black/20">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-8 text-center">Terms & Conditions</h2>
+      <div class="glass-card rounded-2xl p-8 text-gray-300 leading-relaxed space-y-4">
+        <p><strong class="text-white">1. Subscription:</strong> GST Billing operates on a monthly subscription model priced at ₹250 (two hundred fifty Indian Rupees) per month. Subscription grants access to invoice generation, PDF export, report downloads, and cloud backup features.</p>
+        <p><strong class="text-white">2. Payment:</strong> Payments are processed securely via Razorpay. All transactions are in Indian Rupees (INR). Subscription auto-expires at the end of the billing period unless renewed.</p>
+        <p><strong class="text-white">3. Data Storage:</strong> All invoice data, user details, and PDF files are stored locally on your device. Optional Google Drive backup is provided for data safety. We do not store your business data on our servers.</p>
+        <p><strong class="text-white">4. Refund Policy:</strong> Due to the digital nature of the service, refunds are not provided once a subscription period has commenced. Users may cancel renewal at any time.</p>
+        <p><strong class="text-white">5. Usage:</strong> This app is intended for legitimate GST billing purposes for Indian businesses. Misuse, reverse engineering, or unauthorized distribution of the application is strictly prohibited.</p>
+        <p><strong class="text-white">6. Liability:</strong> GST Billing is provided "as is". While we strive for accuracy in tax calculations, users are advised to verify GST compliance with a certified tax professional.</p>
+        <p><strong class="text-white">7. Changes:</strong> We reserve the right to modify these terms, pricing, or features with notice via in-app updates.</p>
+        <p class="text-sm text-gray-500 pt-4">Last updated: June 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Policy Section -->
+  <section id="privacy" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold mb-8 text-center">Privacy Policy</h2>
+      <div class="glass-card rounded-2xl p-8 text-gray-300 leading-relaxed space-y-4">
+        <p><strong class="text-white">1. Data Collection:</strong> GST Billing does not collect personal data on external servers. All data including invoice details, customer information, and PDF files remain stored locally on your device.</p>
+        <p><strong class="text-white">2. Google Drive Backup:</strong> When you opt-in for Google Drive backup, your data files (CSV, JSON, PNG, PDF) are uploaded to your personal Google Drive account. We do not access, read, or share these files.</p>
+        <p><strong class="text-white">3. Razorpay Payments:</strong> Payment processing is handled by Razorpay. We do not store your card, UPI, or banking details. Please refer to Razorpay's Privacy Policy for payment-specific data handling.</p>
+        <p><strong class="text-white">4. Permissions:</strong> The app requests storage permissions to save invoices and PDFs to your device. Camera/Gallery access is only used for uploading your company logo and QR code.</p>
+        <p><strong class="text-white">5. Third Parties:</strong> We do not sell, trade, or share your business data with any third parties. The only external services used are Razorpay (payments) and Google Drive (optional backup).</p>
+        <p><strong class="text-white">6. Data Security:</strong> Subscription status is stored locally using AES encryption. No sensitive business data is transmitted over the internet except for the optional Google Drive backup initiated by you.</p>
+        <p><strong class="text-white">7. Contact:</strong> For privacy-related queries, please contact us through the Play Store listing or app support channel.</p>
+        <p class="text-sm text-gray-500 pt-4">Last updated: June 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-4 border-t border-white/10">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white font-bold">₹</div>
+        <span class="font-bold text-white">GST Billing</span>
+      </div>
+      <div class="flex gap-6 text-sm text-gray-400">
+        <a href="#terms" class="hover:text-pink-400 transition-colors">Terms</a>
+        <a href="#privacy" class="hover:text-pink-400 transition-colors">Privacy</a>
+        <a href="#features" class="hover:text-pink-400 transition-colors">Features</a>
+      </div>
+      <p class="text-sm text-gray-500">© 2026 GST Billing. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
